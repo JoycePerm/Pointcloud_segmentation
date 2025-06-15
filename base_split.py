@@ -325,9 +325,9 @@ def process_directory(args):
         else:
             out_subdir_path.mkdir(parents=True, exist_ok=True)  # 确保目录存在
         if subdir_path.is_dir():
-            pre_downsample_file = subdir_path / 'txt/point_cloud.txt'
-            feature_file = subdir_path / 'txt/feature.txt'
-            camera_file = subdir_path / 'txt/camera.txt'
+            pre_downsample_file = subdir_path / 'point_cloud.txt'
+            feature_file = subdir_path / 'feature.txt'
+            camera_file = subdir_path / 'camera.txt'
 
             if pre_downsample_file.exists() and feature_file.exists():
                 print("Done")
@@ -346,10 +346,6 @@ def process_directory(args):
                 print(f"Saved base.txt ({rotated_base_points.shape[0]} pts) and other.txt ({rotated_other_points.shape[0]} pts) for {subdir}")
 
 def main():
-    # input_directory = r'C:\Users\chenjiayi\Documents\jiayi\split_base\20250428_test'  # 输入文件夹路径
-    # output_directory = r'C:\Users\chenjiayi\Documents\jiayi\split_base\20250428_test_out1'  # 输出文件夹路径
-    # input_directory = r"C:\Users\chenjiayi\Documents\jiayi\split_base\point_cloud_test_data"
-    # output_directory = r"C:\Users\chenjiayi\Documents\jiayi\split_base\point_cloud_test_data_output"
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--input_dir', type=str, required=True)
