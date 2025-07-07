@@ -1,7 +1,7 @@
 # Pointcloud_segmentation
 Divide the bottom plate of the workpiece point cloud.
 
-Visualization of results
+Visualization of segmentation results
 
 ![示例图片](results/1.jpg)
 
